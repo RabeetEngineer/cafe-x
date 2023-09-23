@@ -1,0 +1,9 @@
+.date-picker{
+    border: none !important;
+    height: 40px;
+    border-radius: 5px; /* Adjust the value as needed */
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: black;
+}
