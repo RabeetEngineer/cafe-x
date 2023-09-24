@@ -40,12 +40,12 @@ export const menu = [
     img: "images/menu/asianfusion-1-300x300.jpg",
     products: [
       {
-        image: "images/menu/blackpepperasian.jpg",
+        image: "/images/menu/blackpepperasian.jpg",
         title: "Black Pepper Asian",
         price: "3000",
       },
       {
-        image: "images/menu/Asian/chickenchillidry-300x300.jpg",
+        image: "/images/menu/Asian/chickenchillidry-300x300.jpg",
         title: "Chicken Chilli Dry",
         price: "1800",
       },
@@ -56,7 +56,7 @@ export const menu = [
     category: "Continental Food",
     products: [
       {
-        image: "images/menu/fusion-cuisine-300x300.jpg",
+        image: "/images/menu/fusion-cuisine-300x300.jpg",
         title: "continental 1",
         price: "2344",
       }
