@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { menu } from "../../Data";
+import { Link } from "react-router-dom";
 
 const MenuCategory = () => {
   const { category } = useParams();
@@ -14,8 +15,7 @@ const MenuCategory = () => {
 
   // Check if the category was found, and if so, retrieve its products
   const categoryProducts = selectedCategory ? selectedCategory.products : [];
-  console.log(categoryProducts);
-  console.log(category);
+ 
 
   function convertToText() {
     // Replace dashes with spaces and capitalize the first letter of each word
@@ -37,6 +37,7 @@ const MenuCategory = () => {
         <div className="row mt-5">
           {categoryProducts.map((asianFood, index) => (
             <div className="col-lg-4 col-md-4 col-sm-12" key={index}>
+            <Link to={`/menu/product/${asianFood.id}`}>
               {/* Add an onError handler to display a placeholder image */}
               <img
               src={asianFood.image}
@@ -47,6 +48,7 @@ const MenuCategory = () => {
             />
               <p>{asianFood.title}</p>
               <p>{asianFood.price}</p>
+              </Link>
             </div>
           ))}
         </div>

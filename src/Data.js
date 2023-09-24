@@ -37,14 +37,16 @@ export const banners = [
 export const menu = [
   {
     category: "Asian Food",
-    img: "images/menu/asianfusion-1-300x300.jpg",
+    img: "/images/menu/asianfusion-1-300x300.jpg",
     products: [
       {
+        id: "1",
         image: "/images/menu/blackpepperasian.jpg",
         title: "Black Pepper Asian",
         price: "3000",
       },
       {
+        id: "2",
         image: "/images/menu/Asian/chickenchillidry-300x300.jpg",
         title: "Chicken Chilli Dry",
         price: "1800",
