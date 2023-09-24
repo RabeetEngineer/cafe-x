@@ -36,7 +36,7 @@ export const banners = [
 
 export const menu = [
   {
-    category: "Asian Food 2",
+    category: "Asian Food",
     img: "images/menu/asianfusion-1-300x300.jpg",
     products: [
       {

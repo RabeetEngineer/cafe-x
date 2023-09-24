@@ -15,11 +15,25 @@ const MenuCategory = () => {
   // Check if the category was found, and if so, retrieve its products
   const categoryProducts = selectedCategory ? selectedCategory.products : [];
   console.log(categoryProducts);
+  console.log(category);
+
+  function convertToText() {
+    // Replace dashes with spaces and capitalize the first letter of each word
+    return category
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+  
+  // Example usage:
+  const categoryName = convertToText(category);
+ 
+  
 
   return (
     <>
       <div className="container">
-        <h2>{category}</h2>
+        <h2>{categoryName}</h2>
         <div className="row mt-5">
           {categoryProducts.map((asianFood, index) => (
             <div className="col-lg-4 col-md-4 col-sm-12" key={index}>
