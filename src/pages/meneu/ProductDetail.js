@@ -11,7 +11,6 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProductById = async () => {
       try {
-
         // Attempt to find the product using the id parameter
         const selectedProduct = menu
           .map((category) => category.products)
@@ -37,19 +36,62 @@ const ProductDetail = () => {
   }, [id]);
 
   return (
-    <div className="container">
-      <h2>{product.title}</h2>
-      {product ? (
-        <div>
-          <img src={product.image} alt={product.title} />
-        
-          <p>Price: {product.price}</p>
-          {/* Add more product details here */}
+    <>
+      <div className="container">
+        <div className="row mt-5">
+          {product ? (
+            <>
+              <div className="col-lg-6 col-md-6 col-sm-12 mb-5">
+                <img src={product.image} alt="" style={{ width: "100%" }} />
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-12">
+                <h2>{product.title}</h2>
+                <p style={{ textAlign: "justify" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto similique expedita exercitationem !
+                </p>
+                <h2 className="mt-5">Rs.{product.price}</h2>
+                <div class="input-group mb-3 mt-5">
+                  <label class="input-group-text" for="inputGroupSelect01">
+                    Meat Type
+                  </label>
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Chicken</option>
+                    <option value="Beaf">Beaf</option>
+                    <option value="Mutton">Mutton</option>
+                    <option value="Fish">Fish</option>
+                  </select>
+                </div>
+                <div className="btn-quant d-flex mt-5" >
+                <div class="form-outline me-5" style={{ width: "12%" }}>
+                  <input
+                    min="1"
+                   
+                    max="10"
+                    type="number"
+                    id="typeNumber"
+                    class="form-control"
+                  />
+                </div>
+
+                <div>
+                <a href="">
+                
+                  <button className="btn btn-dark">
+                  <i class="fa fa-shopping-cart me-3" style={{fontSize:"20px"}} ></i>
+                  Add to Cart</button>
+                </a>
+              </div>
+              </div>
+
+              </div>
+            </>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 
