@@ -33,11 +33,13 @@ const MenuCategory = () => {
   return (
     <>
       <div className="container">
-        <h2>{categoryName}</h2>
+      <h1 className="mt-5 text-center">{categoryName}</h1>
+
+
         <div className="row mt-5">
           {categoryProducts.map((asianFood, index) => (
-            <div className="col-lg-4 col-md-4 col-sm-12" key={index}>
-            <Link to={`/menu/product/${asianFood.id}`}>
+            <div className="col-lg-4 col-md-4 col-sm-12 text-center  mb-5" key={index}>
+            <Link className="anchor-null" to={`/menu/product/${asianFood.id}`}>
               {/* Add an onError handler to display a placeholder image */}
               <img
               src={asianFood.image}
@@ -46,8 +48,10 @@ const MenuCategory = () => {
                 console.log(e.target.src);
               }}
             />
-              <p>{asianFood.title}</p>
-              <p>{asianFood.price}</p>
+              <div className="">
+              <h5 className="mt-3">{asianFood.title}</h5>
+              <h4 style={{fontWeight:"bold"}}>Rs.{asianFood.price}</h4>
+              </div>
               </Link>
             </div>
           ))}

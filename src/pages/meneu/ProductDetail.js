@@ -47,8 +47,7 @@ const ProductDetail = () => {
               <div className="col-lg-6 col-md-6 col-sm-12">
                 <h2>{product.title}</h2>
                 <p style={{ textAlign: "justify" }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto similique expedita exercitationem !
+                  {product.desc}
                 </p>
                 <h2 className="mt-5">Rs.{product.price}</h2>
                 <div class="input-group mb-3 mt-5">
@@ -74,7 +73,7 @@ const ProductDetail = () => {
                   />
                 </div>
 
-                <div>
+                <div className="mb-5">
                 <a href="">
                 
                   <button className="btn btn-dark">

@@ -7,6 +7,7 @@ import "react-datetime-picker/dist/DateTimePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -135,9 +136,9 @@ const Home = () => {
           </div>
           <div className="row mt-5 mb-5">
             <div className="col-12 text-center">
-              <a href="">
+              <Link to={"/menu"}>
                 <button className="btn btn-dark">All Products</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
