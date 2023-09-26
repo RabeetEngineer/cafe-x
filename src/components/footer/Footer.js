@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <>
       <footer className="container-fluid mt-5 ">
-
         <div className="container">
           <div className="row mb-5">
             <div className="col-lg-2 col-md-2 col-sm-6 text-center">
@@ -33,11 +32,11 @@ const Footer = () => {
                 Sunday: 13:30 – 00:00
               </h5>
             </div>
-            <div className="col-lg-2 col-md-2 col-sm-6 text-center mb-5">
+            <div className="col-lg-2 col-md-2 col-sm-2 text-center mb-5">
               <h4 className="mt-3" style={{ fontWeight: "bolder" }}>
                 Social Media
               </h4>
-              <div className="social-media-icons mt-4 d-flex justify-content-between">
+              <div className="social-media-icons mt-4 d-flex justify-content-center gap-4">
                 <a className="anchor-null" href="">
                   <i class="fa fa-instagram" style={{ fontSize: "24px" }}></i>
                 </a>
@@ -92,9 +91,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center">
-        <p style={{fontSize:"14px"}}>&copy; {new Date().getFullYear()} Cafe-X | All Rights Reserved</p>
-      </div>
+        <div className="container text-center">
+          <div className="row">
+            <div className="col-12">
+              <p style={{ fontSize: "14px" }}>
+                &copy; {new Date().getFullYear()} Cafe-X | All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
       </footer>
     </>
   );

@@ -10,6 +10,12 @@ body {
   font-family:  'Merienda', cursive;
   font-family: 'Stoke', serif;
   color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+html{
+  margin: 0;
+  padding: 0;
 }
 
 code {
