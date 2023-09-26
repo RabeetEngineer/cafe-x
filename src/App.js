@@ -8,6 +8,7 @@ import About from './aboutUs/About';
 import ContactUs from './contactUs/ContactUs';
 import MenuCategory from './pages/meneu/MenuCategory';
 import ProductDetail from './pages/meneu/ProductDetail';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='about-us' element={<About/>}/>
       <Route path='contact-us' element={<ContactUs/>}/>
     </Routes>
+    <Footer/>
   </>
   );
 }

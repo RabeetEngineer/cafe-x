@@ -6,7 +6,7 @@ import '../../components/Navbar.css'
 const Menu = () => {
   return (
     <>
-      <div className="container">
+      <div className="container mb-5">
         <h1 className="mt-5 text-center">Menu</h1>
         <div className="row mt-5">
           {menu.map((category) => (
@@ -19,6 +19,7 @@ const Menu = () => {
           ))}
         </div>
       </div>
+      <hr />
     </>
   );
 };
