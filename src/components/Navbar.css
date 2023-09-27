@@ -14,15 +14,14 @@
 }
 
 /*  Contact US css */
-.contact-card-main{
-    border: 1px solid white;
-    background-color: #A46497;
-    border-radius: 5px;
+.custom-input,
+.custom-textarea {
+  height: 45px; 
+  background-color: #141414;
+  color: white;
 }
-.contact-card{
-    width: 100%;
-}
-.contact-form-main{
-    background-color: #E9E8E8;
-    
-}
+ /* Placeholder text color */
+ .custom-input::placeholder,
+ .custom-textarea::placeholder {
+   color: #5B5B5B;
+ }
