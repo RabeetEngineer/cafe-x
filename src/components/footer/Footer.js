@@ -94,9 +94,10 @@ const Footer = () => {
         <div className="container text-center">
           <div className="row">
             <div className="col-12">
-              <p style={{ fontSize: "14px" }}>
+              <p style={{ fontSize: "14px", marginBottom:"0" }}>
                 &copy; {new Date().getFullYear()} Cafe-X | All Rights Reserved
               </p>
+              <p style={{ fontSize: "12px", marginTop:"0" }}>Developed by: <a target="_blank" href="https://hafizrabeet-portfolio.netlify.app/">Hafiz Rabeet</a></p>
             </div>
           </div>
         </div>

@@ -12,11 +12,13 @@ const Navbar = () => {
         </div>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
           <div class="container-fluid">
+          <Link to="/">
             <img
               src="/images/logo.png"
               alt=""
               style={{ color: "white", width: "80px,", height: "70px" }}
             />
+            </Link >
             <button
               class="navbar-toggler"
               type="button"
@@ -46,19 +48,7 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu ">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-
-                <li class="nav-item me-3">
+                 <li class="nav-item me-3">
                   <Link class="nav-link active" to="/contact-us">
                     Contact
                   </Link>

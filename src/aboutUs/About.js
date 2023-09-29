@@ -3,7 +3,7 @@ import "./About.css";
 import ReactPlayer from "react-player";
 
 const About = () => {
-  const [videoKey, setVideoKey] = useState(0);
+  const [videoKey, setVideoKey] = useState(1);
 
   // Function to increment the key when the video should restart
   const restartVideo = () => {

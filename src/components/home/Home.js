@@ -2,7 +2,7 @@ import React from "react";
 import { popularDishes } from "../../Data";
 import DateTimePicker from "react-datetime-picker";
 import "react-datetime-picker/dist/DateTimePicker.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "react-datetime-picker/dist/DateTimePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
@@ -118,29 +118,61 @@ const Home = () => {
     setSelectedTime(e.target.value);
   };
 
-  const [videoKey, setVideoKey] = useState(0);
+  const [videoKey, setVideoKey] = useState(1);
 
   // Function to increment the key when the video should restart
   const restartVideo = () => {
     setVideoKey((prevKey) => prevKey + 1);
   };
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Start the video when the component mounts
+      videoRef.current.seekTo(0);
+      const player = videoRef.current.getInternalPlayer();
+      if (player) {
+        player.play();
+      }
+    }
+  }, []);
   return (
     <>
       <div className="container-fluid">
+        {/*Main Hero Sections */}
+
+        <div class="row">
+          <div class="col-12">
+            <div class="image-container position-relative">
+              <img
+                src="/images/banners hero section.gif"
+                class="img-fluid"
+                alt="Responsive image"
+              />
+              <div class="text-overlay d-flex flex-column justify-content-center align-items-center">
+                <h2 class="text-white mb-3">Cafe-X</h2>
+                <p class="text-white">
+                  A genuine fine-dining experience awaits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/*Top Dishes */}
         <div className="container">
           <h1 className="text-center mt-5 mb-3">POPULAR DISHES</h1>
           <div className="row">
             {popularDishes.map((popularDish) => (
               <div className="col-lg-4 col-md-4 col-sm-12 text-center">
-                <a href="">
-                  {" "}
+                <Link className="anchor-null" to={`/${popularDish.id}`}>
                   <img src={popularDish.img} alt="" />
-                </a>
-                <h4 className="mt-3">{popularDish.title}</h4>
-                <h6>Rs. {popularDish.price}</h6>
+
+                  <h4 className="mt-3">{popularDish.title}</h4>
+                  <h6>Rs. {popularDish.price}</h6>
+                </Link>
               </div>
-              
             ))}
           </div>
           <div className="row mt-5 mb-5">
@@ -150,109 +182,6 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        </div>
-
-        {/*Carousels */}
-        <div
-          id="myCarousel"
-          class="carousel slide mb-6"
-          data-bs-ride="carousel"
-          onSlide={restartVideo}
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-label="Slide 1"
-              aria-current="true"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-              class=""
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-              class=""
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="4000">
-            <ReactPlayer
-            style={{
-              width: "100%",
-              filter: "brightness(50%)",
-            }}
-            key={videoKey}
-            url="/images/menu/restaurant home page video.mp4"
-            controls
-            width="100%"
-            playing
-            loop
-          />
-            </div>
-            <div class="carousel-item " data-bs-interval="2000">
-              <img
-                src="/images/banner-2.jpeg"
-                alt=""
-                style={{ width: "100%" }}
-              />
-              <div class="carousel-caption text-start">
-                <h1>Prestigeous DINING.</h1>
-                <p>
-                  <a class="btn btn-lg btn-dark" href="#">
-                    Order Now
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img
-                src="/images/banner-3.jpeg"
-                alt=""
-                style={{ width: "100%" }}
-              />
-              <div class="container">
-                <div class="carousel-caption text-end">
-                  <h1>Flavors for Royalty.</h1>
-                  <p>
-                    Some representative placeholder content for the third slide
-                    of this carousel.
-                  </p>
-                  <p>
-                    <a class="btn btn-lg btn-dark" href="#">
-                      Browse Menu
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
 
         {/*Book Your Table */}
@@ -376,9 +305,7 @@ const Home = () => {
         <hr className="mt-5 mb-5" />
 
         <footer>
-          <div className="container">
-                            
-          </div>
+          <div className="container"></div>
         </footer>
       </div>
     </>

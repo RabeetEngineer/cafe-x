@@ -1,20 +1,24 @@
 export const popularDishes = [
     {
         id:"1001",
-        img:"images/chickenchillidry.jpg",
+        img:"/images/chickenchillidry.jpg",
         title:"CHILI DRY",
-        price:"1450"
+        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        price:"1450",
+        meatType: ["Chicken", "Beef", "Fish"]
     },
     {
        id:"1002",
-        img:"images/BaiZeChicken.jpg",
+        img:"/images/BaiZeChicken.jpg",
         title:"BAI ZE CHICKEN",
+        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
         price:"1920"
     },
     {
         id:"1003",
-        img:"images/RedDragon.jpg",
+        img:"/images/RedDragon.jpg",
         title:"RED DRAGON CHICKEN",
+        desc: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
         price:"1780"
     },
 ]
@@ -47,6 +51,7 @@ export const menu = [
         image: "/images/menu/Asian/blackpepperasian.jpg",
         title: "Black Pepper Asian",
         price: "3000",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -54,6 +59,7 @@ export const menu = [
         image: "/images/menu/Asian/chickenchillidry-300x300.jpg",
         title: "Chicken Chilli Dry",
         price: "1800",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -61,6 +67,7 @@ export const menu = [
         image: "/images/menu/Asian/chickendrumsticks-300x300.jpg",
         title: "Chicken Drum Sticks",
         price: "1100",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -68,6 +75,7 @@ export const menu = [
         image: "/images/menu/Asian/chickenshashlik-300x300.jpg",
         title: "Chicken Shashlik",
         price: "2100",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -75,6 +83,7 @@ export const menu = [
         image: "/images/menu/Asian/chowmein-300x300.jpg",
         title: "Chowmein",
         price: "1500",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -82,6 +91,7 @@ export const menu = [
         image: "/images/menu/Asian/RedDragonChicken-300x300.jpg",
         title: "Red Dragon Chicken",
         price: "2000",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       
@@ -96,6 +106,7 @@ export const menu = [
         image: "/images/menu//Continental/BlackPepperOffTheGrill-300x300.jpg",
         title: "Black Pepper",
         price: "2344",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -103,6 +114,7 @@ export const menu = [
         image: "/images/menu//Continental/ChardonnaySteak-300x300.jpg",
         title: "Chardonnay Steak",
         price: "1900",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -110,6 +122,7 @@ export const menu = [
         image: "/images/menu//Continental/firehotsteak-300x300.jpg",
         title: "Fire Hot Steak",
         price: "2600",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -117,6 +130,7 @@ export const menu = [
         image: "/images/menu//Continental/portobellospecial-300x300.jpg",
         title: "Portobello",
         price: "232650",
+        type: ["Chicken", "Beef", "Fish"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
     ],
@@ -131,6 +145,7 @@ export const menu = [
         image: "/images/menu/Dessert/BlueberryCheesecake-300x300.jpg",
         title: "Blueberry Cheesecake",
         price: "770",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -138,6 +153,7 @@ export const menu = [
         image: "/images/menu/Dessert/BreadPudding-300x300.jpg",
         title: "Bread Pudding",
         price: "850",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -145,6 +161,7 @@ export const menu = [
         image: "/images/menu/Dessert/chocolatecarameloreopie-2-300x300.jpg",
         title: "Chocolate Caremel Oreo Pie",
         price: "700",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -152,6 +169,7 @@ export const menu = [
         image: "/images/menu/Dessert/CookiSkillet-300x300.jpg",
         title: "Cookie Skillet",
         price: "820",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -159,6 +177,7 @@ export const menu = [
         image: "/images/menu/Dessert/LindtChocolateCheesecake-300x300.jpg",
         title: "Lindt Chocolate Cheesecake",
         price: "820",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -166,6 +185,7 @@ export const menu = [
         image: "/images/menu/Dessert/MoltenLavaCake-300x300.jpg",
         title: "Molten Lava Cake",
         price: "900",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -173,6 +193,7 @@ export const menu = [
         image: "/images/menu/Dessert/NutellaDreamCake-300x300.jpg",
         title: "Nutella Dream Cake",
         price: "670",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -180,6 +201,7 @@ export const menu = [
         image: "/images/menu/Dessert/SizzlingSkilletBrownie-300x300.jpg",
         title: "Sizzling Skillet Brownie",
         price: "900",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
       {
@@ -187,6 +209,7 @@ export const menu = [
         image: "/images/menu/Dessert/StrawberryCheesecake-300x300.jpg",
         title: "Strawberry Cheesecake",
         price: "670",
+        type: ["Chocolate - Topping", "BlueBerry - Topping", "DairyMilk - Topping"],
         desc: "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum ",
       },
     ],
