@@ -9,6 +9,7 @@ import ContactUs from './contactUs/ContactUs';
 import MenuCategory from './pages/meneu/MenuCategory';
 import ProductDetail from './pages/meneu/ProductDetail';
 import Footer from './components/footer/Footer';
+import PopularDishesDetail from './pages/meneu/PopularDishesDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/:id' element={<PopularDishesDetail/>}/>
       <Route path='/menu' element={<Menu/>}/>
       <Route path='/menu/:category' element={<MenuCategory />} />
       <Route path='/menu/product/:id' element={<ProductDetail />} />

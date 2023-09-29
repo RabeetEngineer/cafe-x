@@ -8,6 +8,7 @@ import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const Home = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -116,6 +117,13 @@ const Home = () => {
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
   };
+
+  const [videoKey, setVideoKey] = useState(0);
+
+  // Function to increment the key when the video should restart
+  const restartVideo = () => {
+    setVideoKey((prevKey) => prevKey + 1);
+  };
   return (
     <>
       <div className="container-fluid">
@@ -132,6 +140,7 @@ const Home = () => {
                 <h4 className="mt-3">{popularDish.title}</h4>
                 <h6>Rs. {popularDish.price}</h6>
               </div>
+              
             ))}
           </div>
           <div className="row mt-5 mb-5">
@@ -148,6 +157,7 @@ const Home = () => {
           id="myCarousel"
           class="carousel slide mb-6"
           data-bs-ride="carousel"
+          onSlide={restartVideo}
         >
           <div class="carousel-indicators">
             <button
@@ -174,19 +184,21 @@ const Home = () => {
             ></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-              <img
-                src="/images/banner-1.jpeg"
-                alt=""
-                style={{ width: "100%" }}
-              />
-              <div class="container">
-                <div class="carousel-caption text-start">
-                  <h1>A genuine fine-dining experience awaits..</h1>
-                </div>
-              </div>
+            <div class="carousel-item active" data-bs-interval="4000">
+            <ReactPlayer
+            style={{
+              width: "100%",
+              filter: "brightness(50%)",
+            }}
+            key={videoKey}
+            url="/images/menu/restaurant home page video.mp4"
+            controls
+            width="100%"
+            playing
+            loop
+          />
             </div>
-            <div class="carousel-item " data-bs-interval="3000">
+            <div class="carousel-item " data-bs-interval="2000">
               <img
                 src="/images/banner-2.jpeg"
                 alt=""

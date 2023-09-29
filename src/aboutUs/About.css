@@ -1,0 +1,157 @@
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+/* AboutUs.css */
+
+/* Style the section title */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .section-heading {
+    font-size: 36px;
+    color: #ffd700; /* Gold text color for the section heading */
+    margin: 0;
+  }
+  
+  .section-subtitle {
+    font-size: 18px;
+    color: #777; /* Subtitle color */
+    margin: 0;
+  }
+  
+  /* Style the timeline */
+  .timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Cards for large screens (3 cards in a row) */
+  @media (min-width: 1200px) {
+    .story-card {
+      width: calc(33.33% - 20px);
+    }
+  }
+  
+  /* Cards for medium screens (2 cards in a row) */
+  @media (max-width: 1199px) {
+    .story-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  /* Cards for small screens (1 card in a row) */
+  @media (max-width: 767px) {
+    .story-card {
+      width: 100%;
+    }
+  }
+  
+  .story-card {
+    background-color: #1d1d1d; /* Dark background color */
+    color: #BC9864; /* Card text color */
+    border: 1px solid #BC9864;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center-align card contents */
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #BC9864; /* Year text color */
+    margin: 0 auto; /* Center-align year */
+  }
+  
+  .card-content {
+    margin-top: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700; /* Heading text color */
+  margin-bottom: 20px;
+  }
+  
+  .card-description {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+/* Base styles for testimonial cards */
+.testimonial-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Adjust card width for medium screens (two cards in a row) */
+@media (max-width: 992px) {
+  .testimonial-card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Adjust card width for small screens (one card in a row) */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 100%;
+  }
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #333; /* Darker text color */
+}
+
+.testimonial-author {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555; /* Slightly lighter color for the author name */
+}
