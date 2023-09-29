@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <div className="upper-nav text-white d-flex justify-content-center ">
           <h6 className="mt-3 me-2">Delivery Hours:</h6>
-          <h6 className="mt-3">12:00 AM to 12:00 PM</h6>
+          <h6 className="mt-3">12:00 PM to 12:00 AM</h6>
         </div>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
           <div class="container-fluid">

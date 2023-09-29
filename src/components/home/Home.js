@@ -195,13 +195,13 @@ const Home = () => {
    <div class="carousel-inner">
      <div class="carousel-item active" data-bs-interval="2000">
        <img
-         src="/images/banner-1.jpeg"
+         src="/images/banner-4.jpg"
          alt=""
          style={{ width: "100%" }}
        />
        <div class="container">
          <div class="carousel-caption text-start">
-           <h1>A genuine fine-dining experience awaits..</h1>
+           <h4>A genuine fine-dining experience awaits..</h4>
          </div>
        </div>
      </div>
