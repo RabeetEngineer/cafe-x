@@ -140,7 +140,7 @@ const Home = () => {
   return (
     <>
       <div className="container-fluid">
-        {/*Main Hero Sections */}
+        {/*Main Hero Sections 
 
         <div class="row">
           <div class="col-12">
@@ -159,6 +159,104 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+  */}
+
+   {/*Carousels */}
+   <div
+   id="myCarousel"
+   class="carousel slide mb-6"
+   data-bs-ride="carousel"
+ >
+   <div class="carousel-indicators">
+     <button
+       type="button"
+       data-bs-target="#myCarousel"
+       data-bs-slide-to="0"
+       class="active"
+       aria-label="Slide 1"
+       aria-current="true"
+     ></button>
+     <button
+       type="button"
+       data-bs-target="#myCarousel"
+       data-bs-slide-to="1"
+       aria-label="Slide 2"
+       class=""
+     ></button>
+     <button
+       type="button"
+       data-bs-target="#myCarousel"
+       data-bs-slide-to="2"
+       aria-label="Slide 3"
+       class=""
+     ></button>
+   </div>
+   <div class="carousel-inner">
+     <div class="carousel-item active" data-bs-interval="2000">
+       <img
+         src="/images/banner-1.jpeg"
+         alt=""
+         style={{ width: "100%" }}
+       />
+       <div class="container">
+         <div class="carousel-caption text-start">
+           <h1>A genuine fine-dining experience awaits..</h1>
+         </div>
+       </div>
+     </div>
+     <div class="carousel-item " data-bs-interval="3000">
+       <img
+         src="/images/banner-2.jpeg"
+         alt=""
+         style={{ width: "100%" }}
+       />
+       <div class="carousel-caption text-start">
+         <h1>Prestigeous DINING.</h1>
+         <p>
+           <a class="btn btn-lg btn-dark" href="#">
+             Order Now
+           </a>
+         </p>
+       </div>
+     </div>
+     <div class="carousel-item image-container" data-bs-interval="2000">
+       <img
+         src="/images/banner-3.jpeg"
+         alt=""
+         style={{ width: "100%" }}
+       />
+       <div class="container">
+         <div class="carousel-caption tex-center">
+           <h1>Flavors for Royalty.</h1>
+           <p>
+             Some representative placeholder content for the third slide
+             of this carousel.
+           </p>
+         
+         </div>
+       </div>
+     </div>
+   </div>
+   <button
+     class="carousel-control-prev"
+     type="button"
+     data-bs-target="#myCarousel"
+     data-bs-slide="prev"
+   >
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+   </button>
+   <button
+     class="carousel-control-next"
+     type="button"
+     data-bs-target="#myCarousel"
+     data-bs-slide="next"
+   >
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+   </button>
+ </div>
 
         {/*Top Dishes */}
         <div className="container">
