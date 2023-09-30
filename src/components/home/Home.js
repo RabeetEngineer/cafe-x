@@ -212,12 +212,8 @@ const Home = () => {
          style={{ width: "100%" }}
        />
        <div class="carousel-caption text-start">
-         <h1>Prestigeous DINING.</h1>
-         <p>
-           <a class="btn btn-lg btn-dark" href="#">
-             Order Now
-           </a>
-         </p>
+         <h4>Prestigeous DINING.</h4>
+         
        </div>
      </div>
      <div class="carousel-item image-container" data-bs-interval="2000">
@@ -228,7 +224,7 @@ const Home = () => {
        />
        <div class="container">
          <div class="carousel-caption tex-center">
-           <h1>Flavors for Royalty.</h1>
+           <h4>Flavors for Royalty.</h4>
            <p>
              Some representative placeholder content for the third slide
              of this carousel.
